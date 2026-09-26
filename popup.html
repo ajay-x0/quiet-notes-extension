@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiet Notes</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+<header><div class="brand"><img src="icons/icon48.png" width="34" height="34" alt=""><div><h1>Quiet Notes</h1><span>A little space for your thoughts.</span></div></div><button id="newNote" class="primary" disabled>+ New note</button></header>
+<div class="workspace">
+<aside><label class="sr-only" for="search">Search notes</label><input id="search" type="search" placeholder="Search your notes…" maxlength="200">
+<nav aria-label="Note folders"><button id="notesTab" class="active" aria-pressed="true">Notes <span id="noteCount">0</span></button><button id="trashTab" aria-pressed="false">Trash <span id="trashCount">0</span></button></nav>
+<div id="list" class="note-list" aria-label="Notes"></div>
+<div class="backup"><button id="export" disabled>Export backup</button><button id="import" disabled>Import</button><input id="file" type="file" accept=".json,application/json" hidden></div></aside>
+<main>
+<div id="empty"><div class="empty-icon">✎</div><h2>Make room for an idea.</h2><p>Create a note to get started.<br>Your words stay on this device.</p></div>
+<section id="editor" hidden aria-label="Note editor"><div class="editor-top"><span id="date"></span><div><button id="restore" hidden>Restore</button><button id="delete">Move to Trash</button></div></div>
+<label class="sr-only" for="title">Note title</label><input id="title" placeholder="Untitled note" maxlength="160" autocomplete="off">
+<label class="sr-only" for="body">Note content</label><textarea id="body" placeholder="Start writing. We’ll take care of saving." maxlength="100000" spellcheck="true"></textarea>
+<div class="editor-bottom"><span id="words">0 words</span><span>Plain text · Auto-save</span></div></section>
+</main></div>
+<footer><span id="status" role="status" aria-live="polite">Opening your notes…</span><button id="retry" hidden>Retry saving</button><span class="local">● Local only</span></footer>
+<div id="notice" role="alert" hidden></div>
+<script src="popup.js"></script>
+</body></html>
