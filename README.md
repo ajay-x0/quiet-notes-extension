@@ -85,19 +85,6 @@ Failed writes do not poison the queue. Import validates every note before writin
 uses fresh IDs, and does not overwrite existing notes. Note content is displayed as text,
 never interpreted as HTML. No remote executable code is used.
 
-## Share or publish later
-
-For a trusted developer/tester, share the ZIP and these unpacked-install instructions.
-For general users, register in the Chrome Web Store developer dashboard, complete
-account requirements, prepare listing screenshots and a promotional image, publish an
-accessible privacy-policy page, and submit the extension for review. This package is
-built for local installation; it has not been submitted or approved by the Chrome Web Store.
-
-For store upload, ZIP the **contents** of this folder so manifest.json is at the archive
-root. Runtime files are manifest.json, background.js, popup.html, popup.css, popup.js,
-and icons/. Documentation/tests are not required in the store package. Supply a 440×280
-promotional image and at least one 1280×800 or 640×400 screenshot. Use a publisher name
-and support contact you control. Increase manifest version for each code update.
 
 ## Developer tests
 
